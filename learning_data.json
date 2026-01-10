@@ -1,0 +1,251 @@
+{
+  "freelancer_rates": {},
+  "salaries": {
+    "frontend_developer_makassar_junior": {
+      "role": "frontend_developer",
+      "city": "Makassar",
+      "experience": "Junior",
+      "data_points": [
+        {
+          "salary": 4500000,
+          "source": "Sample Data (Baseline)",
+          "timestamp": "2026-01-10T23:35:32.034029"
+        },
+        {
+          "salary": 4500000,
+          "source": "Glints",
+          "timestamp": "2026-01-10T23:57:10.388596"
+        },
+        {
+          "salary": 4000000,
+          "source": "Jobstreet",
+          "timestamp": "2026-01-10T23:57:10.388615"
+        },
+        {
+          "salary": 5000000,
+          "source": "LinkedIn",
+          "timestamp": "2026-01-10T23:57:10.388624"
+        },
+        {
+          "salary": 4200000,
+          "source": "Kalibrr",
+          "timestamp": "2026-01-10T23:57:10.388631"
+        }
+      ]
+    },
+    "frontend_developer_makassar_mid": {
+      "role": "frontend_developer",
+      "city": "Makassar",
+      "experience": "Mid",
+      "data_points": [
+        {
+          "salary": 9000000,
+          "source": "Sample Data (Baseline)",
+          "timestamp": "2026-01-10T23:35:32.034044"
+        },
+        {
+          "salary": 9000000,
+          "source": "Glints",
+          "timestamp": "2026-01-10T23:57:10.388709"
+        },
+        {
+          "salary": 8200000,
+          "source": "Jobstreet",
+          "timestamp": "2026-01-10T23:57:10.388716"
+        },
+        {
+          "salary": 10000000,
+          "source": "LinkedIn",
+          "timestamp": "2026-01-10T23:57:10.388721"
+        },
+        {
+          "salary": 8800000,
+          "source": "Kalibrr",
+          "timestamp": "2026-01-10T23:57:10.388728"
+        }
+      ]
+    },
+    "frontend_developer_makassar_senior": {
+      "role": "frontend_developer",
+      "city": "Makassar",
+      "experience": "Senior",
+      "data_points": [
+        {
+          "salary": 18000000,
+          "source": "Sample Data (Baseline)",
+          "timestamp": "2026-01-10T23:35:32.034050"
+        },
+        {
+          "salary": 18000000,
+          "source": "Glints",
+          "timestamp": "2026-01-10T23:57:10.388771"
+        },
+        {
+          "salary": 16500000,
+          "source": "Jobstreet",
+          "timestamp": "2026-01-10T23:57:10.388779"
+        },
+        {
+          "salary": 20000000,
+          "source": "LinkedIn",
+          "timestamp": "2026-01-10T23:57:10.388785"
+        },
+        {
+          "salary": 17500000,
+          "source": "Kalibrr",
+          "timestamp": "2026-01-10T23:57:10.388791"
+        }
+      ]
+    },
+    "frontend_developer_makassar_lead": {
+      "role": "frontend_developer",
+      "city": "Makassar",
+      "experience": "Lead",
+      "data_points": [
+        {
+          "salary": 32000000,
+          "source": "Sample Data (Baseline)",
+          "timestamp": "2026-01-10T23:35:32.034055"
+        },
+        {
+          "salary": 32000000,
+          "source": "Glints",
+          "timestamp": "2026-01-10T23:57:10.388826"
+        },
+        {
+          "salary": 29000000,
+          "source": "Jobstreet",
+          "timestamp": "2026-01-10T23:57:10.388833"
+        },
+        {
+          "salary": 35000000,
+          "source": "LinkedIn",
+          "timestamp": "2026-01-10T23:57:10.388839"
+        },
+        {
+          "salary": 31000000,
+          "source": "Kalibrr",
+          "timestamp": "2026-01-10T23:57:10.388845"
+        }
+      ]
+    },
+    "devops_engineer_makassar_junior": {
+      "role": "devops_engineer",
+      "city": "Makassar",
+      "experience": "junior",
+      "data_points": [
+        {
+          "salary": 7200000,
+          "source": "Glints",
+          "timestamp": "2026-01-10T23:35:43.067426"
+        },
+        {
+          "salary": 6500000,
+          "source": "Jobstreet",
+          "timestamp": "2026-01-10T23:35:43.067468"
+        },
+        {
+          "salary": 7500000,
+          "source": "LinkedIn",
+          "timestamp": "2026-01-10T23:35:43.067479"
+        },
+        {
+          "salary": 6500000,
+          "source": "Kalibrr",
+          "timestamp": "2026-01-10T23:35:43.067488"
+        }
+      ]
+    },
+    "devops_engineer_makassar_mid": {
+      "role": "devops_engineer",
+      "city": "Makassar",
+      "experience": "mid",
+      "data_points": [
+        {
+          "salary": 14500000,
+          "source": "Glints",
+          "timestamp": "2026-01-10T23:35:43.067580"
+        },
+        {
+          "salary": 13000000,
+          "source": "Jobstreet",
+          "timestamp": "2026-01-10T23:35:43.067589"
+        },
+        {
+          "salary": 16000000,
+          "source": "LinkedIn",
+          "timestamp": "2026-01-10T23:35:43.067595"
+        },
+        {
+          "salary": 13500000,
+          "source": "Kalibrr",
+          "timestamp": "2026-01-10T23:35:43.067602"
+        }
+      ]
+    },
+    "devops_engineer_makassar_senior": {
+      "role": "devops_engineer",
+      "city": "Makassar",
+      "experience": "senior",
+      "data_points": [
+        {
+          "salary": 28000000,
+          "source": "Glints",
+          "timestamp": "2026-01-10T23:35:43.067662"
+        },
+        {
+          "salary": 25000000,
+          "source": "Jobstreet",
+          "timestamp": "2026-01-10T23:35:43.067670"
+        },
+        {
+          "salary": 31000000,
+          "source": "LinkedIn",
+          "timestamp": "2026-01-10T23:35:43.067678"
+        },
+        {
+          "salary": 26500000,
+          "source": "Kalibrr",
+          "timestamp": "2026-01-10T23:35:43.067685"
+        }
+      ]
+    },
+    "devops_engineer_makassar_lead": {
+      "role": "devops_engineer",
+      "city": "Makassar",
+      "experience": "lead",
+      "data_points": [
+        {
+          "salary": 48000000,
+          "source": "Glints",
+          "timestamp": "2026-01-10T23:35:43.067728"
+        },
+        {
+          "salary": 44000000,
+          "source": "Jobstreet",
+          "timestamp": "2026-01-10T23:35:43.067736"
+        },
+        {
+          "salary": 55000000,
+          "source": "LinkedIn",
+          "timestamp": "2026-01-10T23:35:43.067742"
+        },
+        {
+          "salary": 47000000,
+          "source": "Kalibrr",
+          "timestamp": "2026-01-10T23:35:43.067749"
+        }
+      ]
+    }
+  },
+  "projects": {},
+  "search_history": [
+    {
+      "query": "Glints: frontend_developer",
+      "source": "Glints",
+      "results": 0,
+      "timestamp": "2026-01-10T23:35:32.032198"
+    }
+  ],
+  "last_updated": "2026-01-10T23:57:10.388878"
+}
