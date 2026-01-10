@@ -1,5 +1,110 @@
 {
-  "freelancer_rates": {},
+  "freelancer_rates": {
+    "react_junior": {
+      "skill": "react",
+      "experience": "junior",
+      "data_points": [
+        {
+          "rate": 25,
+          "source": "Upwork",
+          "timestamp": "2026-01-10T23:58:54.051780"
+        },
+        {
+          "rate": 20,
+          "source": "Freelancer",
+          "timestamp": "2026-01-10T23:58:54.051790"
+        },
+        {
+          "rate": 50,
+          "source": "Toptal",
+          "timestamp": "2026-01-10T23:58:54.051794"
+        },
+        {
+          "rate": 30,
+          "source": "Arc.dev",
+          "timestamp": "2026-01-10T23:58:54.051797"
+        }
+      ]
+    },
+    "react_mid": {
+      "skill": "react",
+      "experience": "mid",
+      "data_points": [
+        {
+          "rate": 50,
+          "source": "Upwork",
+          "timestamp": "2026-01-10T23:58:54.051827"
+        },
+        {
+          "rate": 40,
+          "source": "Freelancer",
+          "timestamp": "2026-01-10T23:58:54.051831"
+        },
+        {
+          "rate": 80,
+          "source": "Toptal",
+          "timestamp": "2026-01-10T23:58:54.051835"
+        },
+        {
+          "rate": 55,
+          "source": "Arc.dev",
+          "timestamp": "2026-01-10T23:58:54.051838"
+        }
+      ]
+    },
+    "react_senior": {
+      "skill": "react",
+      "experience": "senior",
+      "data_points": [
+        {
+          "rate": 90,
+          "source": "Upwork",
+          "timestamp": "2026-01-10T23:58:54.051879"
+        },
+        {
+          "rate": 75,
+          "source": "Freelancer",
+          "timestamp": "2026-01-10T23:58:54.051908"
+        },
+        {
+          "rate": 125,
+          "source": "Toptal",
+          "timestamp": "2026-01-10T23:58:54.051912"
+        },
+        {
+          "rate": 100,
+          "source": "Arc.dev",
+          "timestamp": "2026-01-10T23:58:54.051916"
+        }
+      ]
+    },
+    "react_expert": {
+      "skill": "react",
+      "experience": "expert",
+      "data_points": [
+        {
+          "rate": 150,
+          "source": "Upwork",
+          "timestamp": "2026-01-10T23:58:54.051937"
+        },
+        {
+          "rate": 125,
+          "source": "Freelancer",
+          "timestamp": "2026-01-10T23:58:54.051940"
+        },
+        {
+          "rate": 200,
+          "source": "Toptal",
+          "timestamp": "2026-01-10T23:58:54.051942"
+        },
+        {
+          "rate": 165,
+          "source": "Arc.dev",
+          "timestamp": "2026-01-10T23:58:54.051944"
+        }
+      ]
+    }
+  },
   "salaries": {
     "frontend_developer_makassar_junior": {
       "role": "frontend_developer",
@@ -247,5 +352,5 @@
       "timestamp": "2026-01-10T23:35:32.032198"
     }
   ],
-  "last_updated": "2026-01-10T23:57:10.388878"
+  "last_updated": "2026-01-10T23:58:54.051970"
 }

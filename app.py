@@ -1,6 +1,7 @@
 """
-Developer Skills & Rates - Full AI Edition
-Live Search + Learning + NLP Models (Hugging Face)
+🚀 SkillPulse AI - Web Interface
+Real-time Developer Salary Intelligence Platform
+Powered by Hugging Face Transformers
 """
 
 import streamlit as st
@@ -13,8 +14,8 @@ if NLP_AVAILABLE:
     from nlp_models import SalaryExtractor, SkillMatcher, SalaryPredictor
 
 st.set_page_config(
-    page_title="Developer Skills & Rates AI",
-    page_icon="🤖",
+    page_title="SkillPulse AI",
+    page_icon="🚀",
     layout="wide"
 )
 
@@ -68,8 +69,8 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<h1 class="main-header">🤖 Developer Skills & Rates AI</h1>', unsafe_allow_html=True)
-st.markdown('<p style="text-align:center; color:#666;">Powered by Hugging Face 🤗 Transformers</p>', unsafe_allow_html=True)
+st.markdown('<h1 class="main-header">🚀 SkillPulse AI</h1>', unsafe_allow_html=True)
+st.markdown('<p style="text-align:center; color:#666;">Real-time Developer Salary Intelligence • Powered by Hugging Face 🤗</p>', unsafe_allow_html=True)
 
 @st.cache_resource
 def get_crawler():
@@ -383,7 +384,7 @@ with tabs[5]:
 st.markdown("---")
 st.markdown("""
 <p style="text-align:center; color:#888; font-size:0.85rem;">
-    🤖 Developer Skills AI | Powered by Hugging Face 🤗<br>
-    Models: BERT NER, Sentence Transformers, Custom Predictor
+    🚀 <b>SkillPulse AI</b> | Real-time Developer Salary Intelligence<br>
+    Powered by Hugging Face 🤗 • Made with ❤️ in Makassar
 </p>
 """, unsafe_allow_html=True)
