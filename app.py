@@ -13,6 +13,14 @@ from datetime import datetime
 if NLP_AVAILABLE:
     from nlp_models import SalaryExtractor, SkillMatcher, SalaryPredictor
 
+# Import Firecrawl scraper
+FIRECRAWL_AVAILABLE = False
+try:
+    from firecrawl_scraper import FirecrawlScraper, FIRECRAWL_AVAILABLE as FC_AVAILABLE
+    FIRECRAWL_AVAILABLE = FC_AVAILABLE
+except ImportError:
+    pass
+
 st.set_page_config(
     page_title="SkillPulse AI",
     page_icon="🚀",
@@ -105,17 +113,112 @@ else:
     st.sidebar.code("pip install transformers torch sentence-transformers")
 
 st.sidebar.markdown("---")
+
+# Firecrawl status
+if FIRECRAWL_AVAILABLE:
+    st.sidebar.success("🔥 Firecrawl Active")
+else:
+    st.sidebar.info("💡 Add Firecrawl API key for live job scraping")
+
+st.sidebar.markdown("---")
 stats = crawler.get_learning_stats()
 st.sidebar.metric("📊 Learning Data", stats['total_salary_keys'])
 
 # Main tabs
-tabs = st.tabs(["🤖 AI Prediction", "🔍 Skill Matcher", "📝 Salary Extractor", 
+tabs = st.tabs(["🔥 Job Search", "🤖 AI Prediction", "🔍 Skill Matcher", "📝 Salary Extractor", 
                 "🌐 Live Search", "💰 Rates", "🇮🇩 Salaries"])
 
 # ========================================================================
-# TAB 1: AI PREDICTION
+# TAB 1: JOB SEARCH (FIRECRAWL)
 # ========================================================================
 with tabs[0]:
+    st.subheader("🔥 Job Search - Powered by Firecrawl")
+    st.markdown("Cari lowongan kerja real-time dari Glints, Jobstreet, dan LinkedIn")
+    
+    col1, col2 = st.columns([1, 2])
+    
+    with col1:
+        job_keyword = st.text_input("🔍 Keyword", placeholder="e.g., react developer")
+        job_location = st.selectbox("📍 Lokasi", ['Makassar', 'Jakarta', 'Bandung', 'Surabaya', 'Indonesia'])
+        
+        job_sources = st.multiselect(
+            "📂 Sumber",
+            ['Glints', 'Jobstreet', 'LinkedIn'],
+            default=['Glints', 'Jobstreet']
+        )
+        
+        if st.button("🔥 Search Jobs", type="primary", key="job_search_btn"):
+            if FIRECRAWL_AVAILABLE:
+                with st.spinner("🔥 Scraping job portals..."):
+                    scraper = FirecrawlScraper()
+                    all_jobs = []
+                    
+                    if 'Glints' in job_sources:
+                        all_jobs.extend(scraper.scrape_glints_jobs(job_keyword, job_location))
+                    if 'Jobstreet' in job_sources:
+                        all_jobs.extend(scraper.scrape_jobstreet_jobs(job_keyword, job_location))
+                    if 'LinkedIn' in job_sources:
+                        all_jobs.extend(scraper.scrape_linkedin_jobs(job_keyword, job_location))
+                    
+                    with col2:
+                        st.markdown(f"### 📋 Found {len(all_jobs)} Jobs")
+                        
+                        for job in all_jobs:
+                            salary_min = job.get('salary_min', 0)
+                            salary_max = job.get('salary_max', 0)
+                            
+                            if salary_min:
+                                salary_text = f"Rp {salary_min:,}"
+                                if salary_max and salary_max > salary_min:
+                                    salary_text += f" - Rp {salary_max:,}"
+                            else:
+                                salary_text = "Salary not disclosed"
+                            
+                            st.markdown(f"""
+                            <div style="background: white; padding: 1rem; border-radius: 10px; 
+                                        margin: 0.5rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                                        border-left: 4px solid #667eea;">
+                                <div style="font-weight: 600; font-size: 1.1rem;">{job.get('title', 'Unknown Position')}</div>
+                                <div style="color: #666; font-size: 0.9rem;">{job.get('company', '')}</div>
+                                <div style="margin-top: 0.5rem;">
+                                    <span style="background: #11998e; color: white; padding: 0.2rem 0.6rem; 
+                                                 border-radius: 15px; font-size: 0.85rem;">{salary_text}</span>
+                                    <span style="background: #667eea; color: white; padding: 0.2rem 0.6rem; 
+                                                 border-radius: 15px; font-size: 0.85rem; margin-left: 0.3rem;">
+                                        {job.get('source', 'Unknown')}
+                                    </span>
+                                </div>
+                            </div>
+                            """, unsafe_allow_html=True)
+            else:
+                with col2:
+                    st.warning("⚠️ Firecrawl API key not configured")
+                    st.markdown("""
+                    **Setup Firecrawl:**
+                    1. Go to https://www.firecrawl.dev/
+                    2. Sign up and get API key
+                    3. Add to `.env` file:
+                    ```
+                    FIRECRAWL_API_KEY=fc-your-key-here
+                    ```
+                    4. Restart the app
+                    """)
+    
+    with col2:
+        if not FIRECRAWL_AVAILABLE:
+            st.info("👈 Configure Firecrawl API key to enable live job scraping")
+            st.markdown("""
+            ### 🔥 Firecrawl Benefits
+            - ✅ Bypass anti-bot protection
+            - ✅ Get clean, structured data
+            - ✅ JavaScript rendering support
+            - ✅ Works with any website
+            """)
+
+# ========================================================================
+# TAB 2: AI PREDICTION
+# ========================================================================
+with tabs[1]:
     st.subheader("🤖 AI Salary Prediction")
     st.markdown("Prediksi gaji berdasarkan deskripsi pekerjaan atau skill menggunakan AI")
     
@@ -195,9 +298,9 @@ with tabs[0]:
             st.code("pip install transformers torch sentence-transformers")
 
 # ========================================================================
-# TAB 2: SKILL MATCHER
+# TAB 3: SKILL MATCHER
 # ========================================================================
-with tabs[1]:
+with tabs[2]:
     st.subheader("🔍 Semantic Skill Matcher")
     st.markdown("Temukan skill serupa menggunakan AI semantic search")
     
@@ -240,9 +343,9 @@ with tabs[1]:
             st.info("👈 Masukkan skill yang ingin dicari")
 
 # ========================================================================
-# TAB 3: SALARY EXTRACTOR
+# TAB 4: SALARY EXTRACTOR
 # ========================================================================
-with tabs[2]:
+with tabs[3]:
     st.subheader("📝 AI Salary Extractor")
     st.markdown("Ekstrak informasi gaji dari teks menggunakan NER (Named Entity Recognition)")
     
@@ -294,9 +397,9 @@ with tabs[2]:
             st.error("NLP models not available")
 
 # ========================================================================
-# TAB 4: LIVE SEARCH
+# TAB 5: LIVE SEARCH
 # ========================================================================
-with tabs[3]:
+with tabs[4]:
     st.subheader("🌐 Live Web Search")
     
     col1, col2 = st.columns([1, 2])
@@ -324,9 +427,9 @@ with tabs[3]:
                         """, unsafe_allow_html=True)
 
 # ========================================================================
-# TAB 5: RATES
+# TAB 6: RATES
 # ========================================================================
-with tabs[4]:
+with tabs[5]:
     st.subheader("💰 Freelancer Rates")
     
     col1, col2 = st.columns([1, 3])
@@ -351,9 +454,9 @@ with tabs[4]:
                         """, unsafe_allow_html=True)
 
 # ========================================================================
-# TAB 6: SALARIES
+# TAB 7: SALARIES
 # ========================================================================
-with tabs[5]:
+with tabs[6]:
     st.subheader("🇮🇩 Indonesia Developer Salaries")
     
     col1, col2 = st.columns([1, 3])

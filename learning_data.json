@@ -135,6 +135,11 @@
           "salary": 4200000,
           "source": "Kalibrr",
           "timestamp": "2026-01-10T23:57:10.388631"
+        },
+        {
+          "salary": 4464000,
+          "source": "📚 Learned (5 data points)",
+          "timestamp": "2026-01-11T00:20:53.373108"
         }
       ]
     },
@@ -167,6 +172,11 @@
           "salary": 8800000,
           "source": "Kalibrr",
           "timestamp": "2026-01-10T23:57:10.388728"
+        },
+        {
+          "salary": 9000000,
+          "source": "📚 Learned (5 data points)",
+          "timestamp": "2026-01-11T00:20:53.373117"
         }
       ]
     },
@@ -199,6 +209,11 @@
           "salary": 17500000,
           "source": "Kalibrr",
           "timestamp": "2026-01-10T23:57:10.388791"
+        },
+        {
+          "salary": 18000000,
+          "source": "📚 Learned (5 data points)",
+          "timestamp": "2026-01-11T00:20:53.373123"
         }
       ]
     },
@@ -231,6 +246,11 @@
           "salary": 31000000,
           "source": "Kalibrr",
           "timestamp": "2026-01-10T23:57:10.388845"
+        },
+        {
+          "salary": 31880000,
+          "source": "📚 Learned (5 data points)",
+          "timestamp": "2026-01-11T00:20:53.373127"
         }
       ]
     },
@@ -341,6 +361,54 @@
           "timestamp": "2026-01-10T23:35:43.067749"
         }
       ]
+    },
+    "backend_developer_makassar_junior": {
+      "role": "backend_developer",
+      "city": "Makassar",
+      "experience": "Junior",
+      "data_points": [
+        {
+          "salary": 5500000,
+          "source": "Sample Data (Baseline)",
+          "timestamp": "2026-01-11T00:21:09.242128"
+        }
+      ]
+    },
+    "backend_developer_makassar_mid": {
+      "role": "backend_developer",
+      "city": "Makassar",
+      "experience": "Mid",
+      "data_points": [
+        {
+          "salary": 11000000,
+          "source": "Sample Data (Baseline)",
+          "timestamp": "2026-01-11T00:21:09.242134"
+        }
+      ]
+    },
+    "backend_developer_makassar_senior": {
+      "role": "backend_developer",
+      "city": "Makassar",
+      "experience": "Senior",
+      "data_points": [
+        {
+          "salary": 22000000,
+          "source": "Sample Data (Baseline)",
+          "timestamp": "2026-01-11T00:21:09.242137"
+        }
+      ]
+    },
+    "backend_developer_makassar_lead": {
+      "role": "backend_developer",
+      "city": "Makassar",
+      "experience": "Lead",
+      "data_points": [
+        {
+          "salary": 38000000,
+          "source": "Sample Data (Baseline)",
+          "timestamp": "2026-01-11T00:21:09.242139"
+        }
+      ]
     }
   },
   "projects": {},
@@ -350,7 +418,19 @@
       "source": "Glints",
       "results": 0,
       "timestamp": "2026-01-10T23:35:32.032198"
+    },
+    {
+      "query": "Glints: frontend_developer",
+      "source": "Glints",
+      "results": 0,
+      "timestamp": "2026-01-11T00:20:53.371877"
+    },
+    {
+      "query": "Glints: backend_developer",
+      "source": "Glints",
+      "results": 0,
+      "timestamp": "2026-01-11T00:21:09.241280"
     }
   ],
-  "last_updated": "2026-01-10T23:58:54.051970"
+  "last_updated": "2026-01-11T00:21:09.242142"
 }
