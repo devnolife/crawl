@@ -28,6 +28,8 @@ interface GitHubRepo {
     topics: string[];
     fork: boolean;
     archived: boolean;
+    private: boolean;
+    visibility: "public" | "private" | "internal";
     created_at: string;
     updated_at: string;
     pushed_at: string;
@@ -61,15 +63,18 @@ export class GitHubService {
     }
 
     /**
-     * Fetch all repositories for the authenticated user
+     * Fetch all repositories for the authenticated user (including private)
+     * Uses visibility=all and affiliation to get all repos the user has access to
      */
     async getRepositories(perPage: number = 100): Promise<GitHubRepo[]> {
         const repos: GitHubRepo[] = [];
         let page = 1;
 
         while (true) {
+            // visibility=all includes public, private, and internal repos
+            // affiliation=owner,collaborator,organization_member gets all repos user has access to
             const response = await fetch(
-                `${GITHUB_API_URL}/user/repos?per_page=${perPage}&page=${page}&sort=updated`,
+                `${GITHUB_API_URL}/user/repos?per_page=${perPage}&page=${page}&sort=updated&visibility=all&affiliation=owner,collaborator,organization_member`,
                 { headers: this.headers }
             );
 
@@ -83,8 +88,8 @@ export class GitHubService {
             repos.push(...pageRepos);
             page++;
 
-            // Safety limit
-            if (page > 10) break;
+            // Safety limit - increased to handle users with many repos
+            if (page > 20) break;
         }
 
         return repos;

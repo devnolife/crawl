@@ -10,6 +10,7 @@ export function ProjectCard({ repo }: ProjectCardProps) {
     const forks = (repo.forks_count as number) || 0;
     const url = repo.html_url as string;
     const topics = (repo.topics as string[]) || [];
+    const isPrivate = (repo.private as boolean) || false;
 
     // Language colors
     const languageColors: Record<string, string> = {
@@ -40,9 +41,16 @@ export function ProjectCard({ repo }: ProjectCardProps) {
             className="block backdrop-blur-xl bg-white/5 rounded-xl border border-white/10 p-4 hover:bg-white/10 transition-all duration-200 hover:scale-[1.01] group"
         >
             <div className="flex items-start justify-between mb-2">
-                <h3 className="font-medium text-white group-hover:text-purple-400 transition-colors">
-                    {name}
-                </h3>
+                <div className="flex items-center gap-2">
+                    <h3 className="font-medium text-white group-hover:text-purple-400 transition-colors">
+                        {name}
+                    </h3>
+                    {isPrivate && (
+                        <span className="px-2 py-0.5 bg-amber-500/20 text-amber-300 text-xs rounded-full flex items-center gap-1">
+                            🔒 Private
+                        </span>
+                    )}
+                </div>
                 <svg
                     className="w-4 h-4 text-gray-500 group-hover:text-gray-300 transition-colors"
                     fill="none"

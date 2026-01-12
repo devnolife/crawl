@@ -89,31 +89,42 @@ export default async function DashboardPage() {
                 {/* Stats overview */}
                 {githubData && (
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                        {[
-                            {
-                                label: "Repositories",
-                                value: githubData.publicRepos,
-                                icon: "📁",
-                            },
-                            { label: "Followers", value: githubData.followers, icon: "👥" },
-                            { label: "Following", value: githubData.following, icon: "➡️" },
-                            {
-                                label: "Languages",
-                                value: Object.keys(
-                                    githubData.languages as Record<string, number>
-                                ).length,
-                                icon: "💻",
-                            },
-                        ].map((stat, i) => (
-                            <div
-                                key={i}
-                                className="backdrop-blur-xl bg-white/5 rounded-xl border border-white/10 p-4"
-                            >
-                                <div className="text-2xl mb-2">{stat.icon}</div>
-                                <div className="text-2xl font-bold text-white">{stat.value}</div>
-                                <div className="text-gray-400 text-sm">{stat.label}</div>
-                            </div>
-                        ))}
+                        {(() => {
+                            const repos = githubData.repos as Array<Record<string, unknown>>;
+                            const totalRepos = repos.length;
+                            const privateRepos = repos.filter(r => r.private === true).length;
+                            const publicRepos = totalRepos - privateRepos;
+
+                            return [
+                                {
+                                    label: "Total Repos",
+                                    value: totalRepos,
+                                    icon: "📁",
+                                    subLabel: `${publicRepos} public, ${privateRepos} private`
+                                },
+                                { label: "Followers", value: githubData.followers, icon: "👥" },
+                                { label: "Following", value: githubData.following, icon: "➡️" },
+                                {
+                                    label: "Languages",
+                                    value: Object.keys(
+                                        githubData.languages as Record<string, number>
+                                    ).length,
+                                    icon: "💻",
+                                },
+                            ].map((stat, i) => (
+                                <div
+                                    key={i}
+                                    className="backdrop-blur-xl bg-white/5 rounded-xl border border-white/10 p-4"
+                                >
+                                    <div className="text-2xl mb-2">{stat.icon}</div>
+                                    <div className="text-2xl font-bold text-white">{stat.value}</div>
+                                    <div className="text-gray-400 text-sm">{stat.label}</div>
+                                    {"subLabel" in stat && stat.subLabel && (
+                                        <div className="text-gray-500 text-xs mt-1">{stat.subLabel}</div>
+                                    )}
+                                </div>
+                            ));
+                        })()}
                     </div>
                 )}
 
