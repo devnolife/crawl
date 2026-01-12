@@ -23,6 +23,26 @@
           "rate": 30,
           "source": "Arc.dev",
           "timestamp": "2026-01-10T23:58:54.051797"
+        },
+        {
+          "rate": 25,
+          "source": "Upwork",
+          "timestamp": "2026-01-12T16:34:18.215881"
+        },
+        {
+          "rate": 20,
+          "source": "Freelancer",
+          "timestamp": "2026-01-12T16:34:18.215892"
+        },
+        {
+          "rate": 50,
+          "source": "Toptal",
+          "timestamp": "2026-01-12T16:34:18.215897"
+        },
+        {
+          "rate": 30,
+          "source": "Arc.dev",
+          "timestamp": "2026-01-12T16:34:18.215900"
         }
       ]
     },
@@ -49,6 +69,26 @@
           "rate": 55,
           "source": "Arc.dev",
           "timestamp": "2026-01-10T23:58:54.051838"
+        },
+        {
+          "rate": 50,
+          "source": "Upwork",
+          "timestamp": "2026-01-12T16:34:18.215934"
+        },
+        {
+          "rate": 40,
+          "source": "Freelancer",
+          "timestamp": "2026-01-12T16:34:18.215937"
+        },
+        {
+          "rate": 80,
+          "source": "Toptal",
+          "timestamp": "2026-01-12T16:34:18.215939"
+        },
+        {
+          "rate": 55,
+          "source": "Arc.dev",
+          "timestamp": "2026-01-12T16:34:18.215942"
         }
       ]
     },
@@ -75,6 +115,26 @@
           "rate": 100,
           "source": "Arc.dev",
           "timestamp": "2026-01-10T23:58:54.051916"
+        },
+        {
+          "rate": 90,
+          "source": "Upwork",
+          "timestamp": "2026-01-12T16:34:18.215960"
+        },
+        {
+          "rate": 75,
+          "source": "Freelancer",
+          "timestamp": "2026-01-12T16:34:18.215963"
+        },
+        {
+          "rate": 125,
+          "source": "Toptal",
+          "timestamp": "2026-01-12T16:34:18.215965"
+        },
+        {
+          "rate": 100,
+          "source": "Arc.dev",
+          "timestamp": "2026-01-12T16:34:18.215968"
         }
       ]
     },
@@ -101,6 +161,26 @@
           "rate": 165,
           "source": "Arc.dev",
           "timestamp": "2026-01-10T23:58:54.051944"
+        },
+        {
+          "rate": 150,
+          "source": "Upwork",
+          "timestamp": "2026-01-12T16:34:18.215983"
+        },
+        {
+          "rate": 125,
+          "source": "Freelancer",
+          "timestamp": "2026-01-12T16:34:18.215985"
+        },
+        {
+          "rate": 200,
+          "source": "Toptal",
+          "timestamp": "2026-01-12T16:34:18.215987"
+        },
+        {
+          "rate": 165,
+          "source": "Arc.dev",
+          "timestamp": "2026-01-12T16:34:18.215990"
         }
       ]
     }
@@ -140,6 +220,31 @@
           "salary": 4464000,
           "source": "📚 Learned (5 data points)",
           "timestamp": "2026-01-11T00:20:53.373108"
+        },
+        {
+          "salary": 4466400,
+          "source": "📚 Learned (6 data points)",
+          "timestamp": "2026-01-12T16:33:50.208066"
+        },
+        {
+          "salary": 4500000,
+          "source": "Glints",
+          "timestamp": "2026-01-12T16:34:23.900846"
+        },
+        {
+          "salary": 4000000,
+          "source": "Jobstreet",
+          "timestamp": "2026-01-12T16:34:23.900860"
+        },
+        {
+          "salary": 5000000,
+          "source": "LinkedIn",
+          "timestamp": "2026-01-12T16:34:23.900865"
+        },
+        {
+          "salary": 4200000,
+          "source": "Kalibrr",
+          "timestamp": "2026-01-12T16:34:23.900869"
         }
       ]
     },
@@ -177,6 +282,31 @@
           "salary": 9000000,
           "source": "📚 Learned (5 data points)",
           "timestamp": "2026-01-11T00:20:53.373117"
+        },
+        {
+          "salary": 9000000,
+          "source": "📚 Learned (6 data points)",
+          "timestamp": "2026-01-12T16:33:50.208072"
+        },
+        {
+          "salary": 9000000,
+          "source": "Glints",
+          "timestamp": "2026-01-12T16:34:23.900907"
+        },
+        {
+          "salary": 8200000,
+          "source": "Jobstreet",
+          "timestamp": "2026-01-12T16:34:23.900911"
+        },
+        {
+          "salary": 10000000,
+          "source": "LinkedIn",
+          "timestamp": "2026-01-12T16:34:23.900914"
+        },
+        {
+          "salary": 8800000,
+          "source": "Kalibrr",
+          "timestamp": "2026-01-12T16:34:23.900918"
         }
       ]
     },
@@ -214,6 +344,31 @@
           "salary": 18000000,
           "source": "📚 Learned (5 data points)",
           "timestamp": "2026-01-11T00:20:53.373123"
+        },
+        {
+          "salary": 18000000,
+          "source": "📚 Learned (6 data points)",
+          "timestamp": "2026-01-12T16:33:50.208075"
+        },
+        {
+          "salary": 18000000,
+          "source": "Glints",
+          "timestamp": "2026-01-12T16:34:23.900941"
+        },
+        {
+          "salary": 16500000,
+          "source": "Jobstreet",
+          "timestamp": "2026-01-12T16:34:23.900945"
+        },
+        {
+          "salary": 20000000,
+          "source": "LinkedIn",
+          "timestamp": "2026-01-12T16:34:23.900948"
+        },
+        {
+          "salary": 17500000,
+          "source": "Kalibrr",
+          "timestamp": "2026-01-12T16:34:23.900951"
         }
       ]
     },
@@ -251,6 +406,31 @@
           "salary": 31880000,
           "source": "📚 Learned (5 data points)",
           "timestamp": "2026-01-11T00:20:53.373127"
+        },
+        {
+          "salary": 31887999,
+          "source": "📚 Learned (6 data points)",
+          "timestamp": "2026-01-12T16:33:50.208077"
+        },
+        {
+          "salary": 32000000,
+          "source": "Glints",
+          "timestamp": "2026-01-12T16:34:23.900971"
+        },
+        {
+          "salary": 29000000,
+          "source": "Jobstreet",
+          "timestamp": "2026-01-12T16:34:23.900974"
+        },
+        {
+          "salary": 35000000,
+          "source": "LinkedIn",
+          "timestamp": "2026-01-12T16:34:23.900977"
+        },
+        {
+          "salary": 31000000,
+          "source": "Kalibrr",
+          "timestamp": "2026-01-12T16:34:23.900980"
         }
       ]
     },
@@ -430,7 +610,13 @@
       "source": "Glints",
       "results": 0,
       "timestamp": "2026-01-11T00:21:09.241280"
+    },
+    {
+      "query": "Glints: frontend_developer",
+      "source": "Glints",
+      "results": 0,
+      "timestamp": "2026-01-12T16:33:50.207191"
     }
   ],
-  "last_updated": "2026-01-11T00:21:09.242142"
+  "last_updated": "2026-01-12T16:34:23.900998"
 }
